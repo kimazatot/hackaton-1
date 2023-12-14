@@ -1,3 +1,5 @@
 .env
 env
 venv
+kaktus_bot.py
+news.csv
