@@ -82,7 +82,7 @@
 
 # token = config('TOKEN')
 # bot = telebot.TeleBot(token)
-# data = main()  # Получаем данные сразу при запуске бота
+# data = main()  
 
 # inline_keyboard = types.ReplyKeyboardMarkup(row_width=5)
 # income_types = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -188,7 +188,7 @@ def start(message):
     for num, news in enumerate(data, start=1):
         news_text += f"{num}. {news[0]}\n"
 
-    chunks = [news_text[i:i + 4000] for i in range(0, len(news_text), 4000)]  # Разделение текста на части по 4000 символов
+    chunks = [news_text[i:i + 4000] for i in range(0, len(news_text), 4000)]  
 
     for chunk in chunks:
         bot.send_message(message.chat.id, 'Вот все новости:\n\n' + chunk, disable_notification=True)
